@@ -1,18 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Card from './components/Card'
+
+import Form from './components/Form'
 
 function App() {
-
+  const [showForm, setShowForm] = useState(true)
   return (
     <>
-      <h1>Carga de estudiantes</h1>
-      <form>
-        
-      </form>
-        <Card/>
+      {showForm && <Form setShowForm={setShowForm}/>}
     </>
   )
 }
